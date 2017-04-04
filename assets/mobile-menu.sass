@@ -1,0 +1,56 @@
+.hamburger
+    position: fixed
+    right: 0
+    top: 35px
+    cursor: pointer
+    color: $dark-green
+    font-size: 48px
+    -webkit-font-smoothing: antialiased
+    min-width: 50px
+    min-height: 50px
+    z-index: 6
+    line-height: 32px
+    transition: color 300ms ease-in-out
+    display: none
+
+.hamburger:hover
+    color: $light-green
+
+.sidebar
+    z-index: 5
+    position: fixed
+    right: -304px
+    top: 0
+    height: 100%
+    width: 300px
+    background: $green
+    font-family: Arial, Helvetica, Verdana, sans-serif
+    box-shadow: -1px 0px 3px #32443d
+    transition: transform 300ms ease-in-out
+    display: none
+
+.sidebar ul
+    list-style: none
+    padding-top: 140px
+    padding-left: 10px
+
+.sidebar li
+    height: 48px
+    width: 100%
+
+.sidebar li a
+    text-decoration: none
+    color: #fff
+    font-size: 20px
+
+.sidebar li a:hover
+    text-decoration: underline
+
+#menu_toggle
+    display: none
+
+#menu_toggle:checked + .mobile_wrap .hamburger
+    color: #fff
+
+#menu_toggle:checked + .mobile_wrap .sidebar
+    transform: translate(-304px, 0)
